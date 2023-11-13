@@ -1,0 +1,4 @@
+<div class="keyboard">
+    <div *ngFor="let key of keys" [ngClass]="{'key': true, 'black': key.includes('#')}">{{ key }}</div>
+</div>
+  
