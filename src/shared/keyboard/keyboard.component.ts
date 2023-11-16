@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 })
 export class KeyboardComponent {
   @Input() numberOfOctaves: number = 1;
+  @Output() notePressed: EventEmitter<string> = new EventEmitter()
 
   get keys(): string[] {
     // Generate an array of keys based on the number of octaves
@@ -26,4 +27,8 @@ export class KeyboardComponent {
   }
 
   constructor() { }
+
+  triggerNote(note: string) {
+    this.notePressed.emit(note)
+  }
 }

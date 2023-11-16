@@ -1,4 +1,4 @@
 <div class="keyboard">
-    <div *ngFor="let key of keys" [ngClass]="{'key': true, 'black': key.includes('#')}">{{ key }}</div>
+    <div *ngFor="let key of keys" [ngClass]="{'key': true, 'black': key.includes('#')}" (click)="triggerNote(key)">{{ key }}</div>
 </div>
   
