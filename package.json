@@ -16,12 +16,16 @@
     "@angular/compiler": "^17.0.0",
     "@angular/core": "^17.0.0",
     "@angular/forms": "^17.0.0",
+    "@angular/material": "^17.0.1",
     "@angular/platform-browser": "^17.0.0",
     "@angular/platform-browser-dynamic": "^17.0.0",
     "@angular/router": "^17.0.0",
+    "@material/web": "^1.0.1",
+    "@tonaljs/key": "^4.9.1",
     "rxjs": "~7.8.0",
     "svguitar": "^2.2.2",
     "teoria": "^2.5.0",
+    "tonal": "^5.0.0",
     "tslib": "^2.3.0",
     "vexflow": "^4.2.3",
     "zone.js": "~0.14.2"
@@ -44,5 +48,4 @@
     "svgdom": "0.1.16",
     "@svgdotjs/svg.js": "3.2.0"
   }
-  
 }

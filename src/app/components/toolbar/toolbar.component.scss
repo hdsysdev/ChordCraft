@@ -1,0 +1,18 @@
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: black; /* Adjust the text color as needed */
+}
+
+.logo-container img {
+  max-height: 50px; /* Adjust the max height of the logo as needed */
+}
+
+.product-title {
+  margin-left: 10px; /* Adjust the margin as needed */
+  font-size: 24px; /* Adjust the font size as needed */
+  font-weight: bold;
+}
+  

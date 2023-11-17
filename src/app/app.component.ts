@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { KeyboardComponent } from '../shared/keyboard/keyboard.component';
-import { ChordDiagramComponent } from '../shared/chord-diagram/chord-diagram.component';
+import { KeyboardComponent } from './shared/keyboard/keyboard.component';
+import { ChordDiagramComponent } from './shared/chord-diagram/chord-diagram.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 @Component({
@@ -13,7 +14,7 @@ import { ChordDiagramComponent } from '../shared/chord-diagram/chord-diagram.com
     RouterOutlet, 
     KeyboardComponent, 
     ChordDiagramComponent, 
-    ChordDiagramComponent
+    HomeComponent
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
