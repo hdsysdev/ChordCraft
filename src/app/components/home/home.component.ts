@@ -1,15 +1,9 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { KeyboardComponent } from '../../shared/keyboard/keyboard.component';
-import { ChordDiagramComponent } from '../../shared/chord-diagram/chord-diagram.component';
 import {Key} from 'tonal';
-import { ToolbarComponent } from '../toolbar/toolbar.component';
 
 
 @Component({
   selector: 'app-home',
-  standalone: true,
-  imports: [CommonModule, KeyboardComponent, ChordDiagramComponent, ToolbarComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

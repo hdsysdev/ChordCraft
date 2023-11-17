@@ -1,29 +1,34 @@
 import { Component, ElementRef, Input, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Chord, SVGuitarChord } from 'svguitar';
-import {MatCardModule} from '@angular/material/card';
-import { KeyDisplayService } from './services/key-display.service';
+import { MatCardModule} from '@angular/material/card';
+import { KeyDisplayService } from '../../services/key-display.service';
 import { Subject, takeUntil } from 'rxjs';
+import { ChordService } from '../../services/chord.service';
+import { Chords } from '../../model/chords.model';
 
 @Component({
   selector: 'app-chord-diagram',
-  standalone: true,
-  imports: [CommonModule, MatCardModule],
   templateUrl: './chord-diagram.component.html',
   styleUrl: './chord-diagram.component.scss'
 })
 export class ChordDiagramComponent implements OnInit, OnDestroy {
-  @Input() chord: String = ''
+  @Input() chord: String = '';
 
-  ngDestroy$ = new Subject()
+  ngDestroy$ = new Subject();
 
-  chart = new SVGuitarChord('#chart')
+  chart = new SVGuitarChord('#chart');
+
+  chords?: Chords;
 
   constructor(
-    private keyDisplayService: KeyDisplayService
+    private keyDisplayService: KeyDisplayService,
+    private chordsService: ChordService,
   ){}
 
   ngOnInit(): void {
+    this.loadChordsJSON();
+    
     this.chart.configure({
       tuning: ['E', 'A', 'D', 'G', 'B', 'E'],
     }).draw()
@@ -35,7 +40,13 @@ export class ChordDiagramComponent implements OnInit, OnDestroy {
     })
   }
 
-  generateChordDiagram(note: string, chordType: string): ChordConfig {
+  loadChordsJSON(): void {
+    this.chordsService.getChords$().subscribe(chordsJson => {
+      this.chords = chordsJson;
+    });
+  }
+
+  generateChordDiagram(note: string, chordType: string): Chord {
     const chordConfig: Chord = {
       fingers: [],
       barres: [],
