@@ -41,7 +41,7 @@
     "typescript": "~5.2.2"
   },
   "resolutions": {
-    "svgdom": "^0.1.16",
+    "svgdom": "0.1.16",
     "@svgdotjs/svg.js": "3.2.0"
   }
   
