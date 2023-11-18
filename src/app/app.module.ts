@@ -26,7 +26,6 @@ import { routes } from './app.routes';
   imports: [
     CommonModule,
     HttpClientModule,
-    
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes), 

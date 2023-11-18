@@ -1,13 +1,14 @@
 .app-header {
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
   padding: 20px;
   color: black; /* Adjust the text color as needed */
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .logo-container img {
-  max-height: 50px; /* Adjust the max height of the logo as needed */
+  max-height: 75px; /* Adjust the max height of the logo as needed */
 }
 
 .product-title {
