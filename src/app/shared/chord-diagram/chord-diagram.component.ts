@@ -6,6 +6,13 @@ import { KeyDisplayService } from '../../services/key-display.service';
 import { Subject, takeUntil } from 'rxjs';
 import { ChordService } from '../../services/chord.service';
 import { Chords } from '../../model/chords.model';
+// import * as chordictionary from "chordictionary/src/main.js";
+
+// declare module chordictionary {
+//   const Chordictionary: any;
+//   export = Chordictionary;
+// }
+
 
 @Component({
   selector: 'app-chord-diagram',

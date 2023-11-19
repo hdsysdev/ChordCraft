@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Chords } from '../model/chords.model';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,5 +14,9 @@ export class ChordService {
 
   getChords$(): Observable<Chords> {
     return this.httpClient.get<Chords>(this.chordsJsonUrl);
+  }
+
+  getFingerPlacements(chord: string): void {
+    
   }
 }
